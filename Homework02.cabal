@@ -1,0 +1,48 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           Homework02
+version:        0.1.0.0
+homepage:       https://github.com/githubuser/Homework02#readme
+bug-reports:    https://github.com/githubuser/Homework02/issues
+author:         Author name here
+maintainer:     Author name here
+copyright:      2023 Author name here
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/Homework02
+
+library
+  exposed-modules:
+      Solution
+  other-modules:
+      Paths_Homework02
+  hs-source-dirs:
+      source
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite Homework02-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      SolutionSpec
+      Paths_Homework02
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Homework02
+    , QuickCheck
+    , base >=4.7 && <5
+    , hspec
+  default-language: Haskell2010
